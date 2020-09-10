@@ -1,0 +1,252 @@
+/*包含所有内容的盒子*/
+.contains{
+    width: 100%;
+    min-height: 800px;
+    background-color: #eee;
+}
+/*顶部导航栏*/
+.header{
+    width: 100%;
+    height: 40px;
+    background-color: rgb(201, 21, 35);
+    position: fixed;
+    z-index: 99;
+    padding-left:70px;
+    padding-right:60px;
+}
+.header a:nth-child(1){
+    width: 60px;
+    height: 36px;
+    position: absolute;
+    left: 5px;
+    top: 2px;
+    background:url("../images/sprites.png") no-repeat 0 -103px;
+    /* 设置 背景图片的 大小 压缩了一倍 目的是 为了 防止 用户看到 像素颗粒 */
+    /* 如果要一行写完 background  如果要写size  要加/ */
+    background-size: 200px 200px;
+}
+.header input{
+    width: 100%;
+    height: 30px;
+    border-radius:15px;
+    margin-top:5px;
+    padding-left:25px;
+}
+.header a:nth-child(4){
+    position: absolute;
+    top: 0;
+    right:13px;
+    line-height:40px;
+    color: #fff;
+    font-size:17px;
+}
+.header span{
+    position: absolute;
+    top: 10px;
+    left:74px;
+    width: 20px;
+    height: 20px;
+    background:url("../images/sprites.png") no-repeat -60px -109px;
+    /* 设置 背景图片的 大小 压缩了一倍 目的是 为了 防止 用户看到 像素颗粒 */
+    /* 如果要一行写完 background  如果要写size  要加/ */
+    background-size: 200px 200px;
+}
+
+/*顶部轮播图*/
+.banner{
+    width: 100%;
+    overflow:hidden;
+    position: relative;
+}
+/*轮播图*/
+.banner .banner-images{
+    width: 1000%;
+    transform:translateX(-10%);
+}
+.banner .banner-images li{
+    float: left;
+    width: 10%;
+}
+.banner .banner-images a{
+    width: 100%;
+    display:block;
+}
+.banner .banner-images img{
+    width: 100%;
+    display:block;
+}
+/*轮播图索引*/
+.banner .banner-index{
+    position: absolute;
+    left: 50%;
+    bottom: 10px;
+    margin-left:-44px;
+}
+.banner .banner-index li{
+    float: left;
+    width: 6px;
+    height: 6px;
+    border-radius:50%;
+    border: 1px solid #fff;
+    margin-left:5px;
+}
+.banner .banner-index li.current{
+    background-color: #fff;
+}
+/*中间导航栏*/
+.nav{
+    width: 100%;
+    padding-top: 10px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+}
+.nav ul{
+    width: 100%;
+}
+.nav ul li{
+    width: 25%;
+    float: left;
+}
+.nav ul li a{
+    width: 100%;
+    display: block;
+}
+.nav ul li img{
+    width: 60%;
+    display: block;
+    margin: 0 auto;
+}
+.nav ul li p{
+    width: 100%;
+    text-align: center;
+    margin: 5px 0;
+}
+/*主体内容*/
+.main{
+    width: 100%;
+    padding: 0 5px;
+    margin-top: 10px;
+}
+.main .content{
+    width: 100%;
+    min-height: 150px;
+    background-color: #fff;
+    margin: 5px 0;
+    box-shadow:0 0 3px 0 gray;
+}
+.main .content .content-top{
+    width: 100%;
+    height: 32px;
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
+}
+.main .content .content-bottom{
+    width: 100%;
+}
+/*第一部分内容*/
+.main .content:nth-child(1) .content-top{
+    border-bottom: 0;
+}
+.main .content:nth-child(1) .content-top span{
+    /*display: block;*/
+    width: 20px;
+    height: 25px;
+    float: left;
+    margin-top: 3.5px;
+    margin-left: 5px;
+    background:url("../images/seckill-icon.png") no-repeat ;
+    background-size: 20px 25px;
+}
+.main .content:nth-child(1) .content-top ul{
+    float: left;
+    margin-top: 8.5px;
+    margin-left:5px;
+}
+.main .content:nth-child(1) .content-top ul li{
+    float: left;
+    width: 10px;
+    height: 15px;
+    background-color: #000;
+    color: #fff;
+    line-height: 15px;
+    text-align: center;
+    margin-right: 2px;
+}
+.main .content:nth-child(1) .content-top ul li:nth-child(3n){
+    background-color: #fff;
+    color: #000;
+}
+.main .content:nth-child(1) .content-top p{
+    float: left;
+    color: rgb(201, 21, 35);
+    line-height: 32px;
+    margin-left: 5px;
+}
+.main .content:nth-child(1) .content-top a{
+    float: right;
+    margin-right: 5px;
+    line-height: 32px;
+}
+.main .content:nth-child(1) .content-bottom ul{
+    width: 100%;
+}
+.main .content:nth-child(1) .content-bottom ul li{
+    width: 33.333%;
+    float: left;
+}
+.main .content:nth-child(1) .content-bottom ul li a{
+    width: 100%;
+    display: block;
+}
+.main .content:nth-child(1) .content-bottom ul li a img{
+    width: 60%;
+    margin: 0 auto;
+    display: block;
+}
+.main .content:nth-child(1) .content-bottom ul li:nth-child(2) a {
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+}
+.main .content:nth-child(1) .content-bottom ul li p{
+    width: 100%;
+    text-align: center;
+    line-height: 30px;
+    font-size: 13px;
+}
+.main .content:nth-child(1) .content-bottom ul li p:nth-child(2){
+    color: rgb(201, 21, 35);
+}
+.main .content:nth-child(1) .content-bottom ul li p:nth-child(3){
+    color: #000;
+    text-decoration: line-through;
+}
+/*除了第一部分外的其他部分*/
+.main .content:nth-child(n+2) .content-top p{
+    color:rgb(201, 21, 35);
+    line-height: 32px;
+    margin-left: 15px;
+    position: relative;
+}
+.main .content:nth-child(n+2) .content-top p::before{
+    content:"";
+    position: absolute;
+    width: 5px;
+    height: 18px;
+    background-color: rgb(201, 21, 35);
+    left: -10px;
+    top: 7px;
+}
+.main .content:nth-child(n+2) .content-bottom ul{
+    width: 100%;
+}
+.main .content:nth-child(n+2) .content-bottom ul li{
+    width: 50%;
+}
+.main .content:nth-child(n+2) .content-bottom ul li a{
+    width: 100%;
+    display: block;
+}
+.main .content:nth-child(n+2) .content-bottom ul li a img{
+    width: 100%;
+    display: block;
+}
